@@ -14,6 +14,8 @@ export async function getRandomMeal() {
         };
     };
     const meal = { Id: idMeal, Name: strMeal, Ingredients: arrayIngredients, Instructions: strInstructions};
+
+    
     return meal;
 };
 
