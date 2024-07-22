@@ -9,8 +9,8 @@ client.on("connect", () => {
     // const data = { action: "mealByName", body: { name: "spicy" } }  // => utiliza mealByName
 
     // const data = { action: "getRandomCocktail" }  // => utiliza getRandomCocktail
-    // const data = { action: "cocktailById", body: { id: 11007 } }  // => utiliza cocktailById
-    const data = { action: "cocktailByName", body: { name: "margarita" } }  // => utiliza cocktailByName
+    const data = { action: "cocktailById", body: { id: 11007 } }  // => utiliza cocktailById
+    // const data = { action: "cocktailByName", body: { name: "margarita" } }  // => utiliza cocktailByName
 
     // const data = { accion: "getRandomMeal" }  // => Probar si me tira error
     // const data = { action: "getRandomDrink" }  // => Probar si me tira error

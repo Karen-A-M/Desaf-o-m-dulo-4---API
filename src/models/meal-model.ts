@@ -1,6 +1,8 @@
 import { URL_RandomMeal } from "../utils/constants";
 import { URL_API_MEAL } from "../utils/constants";
 import { Messages } from "../utils/enums";
+import { writeFile  } from "../utils/constants";
+
 
 export async function getRandomMeal() {
     const response = await fetch(URL_RandomMeal);
@@ -15,7 +17,9 @@ export async function getRandomMeal() {
     };
     const meal = { Id: idMeal, Name: strMeal, Ingredients: arrayIngredients, Instructions: strInstructions};
 
-    
+    const mealInDatabase = { History: "getRandomMeal", Id: idMeal, Name: strMeal, Ingredients: arrayIngredients, Instructions: strInstructions};
+    writeFile(mealInDatabase);
+
     return meal;
 };
 
@@ -35,6 +39,10 @@ export async function mealById(id: string | number) {
         };
     };
     const meal = { Id: idMeal, Name: strMeal, Ingredients: arrayIngredients, Instructions: strInstructions};
+
+    const mealInDatabase = { History: "mealById", Id: idMeal, Name: strMeal, Ingredients: arrayIngredients, Instructions: strInstructions};
+    writeFile(mealInDatabase);
+
     return meal;
 };
 
@@ -58,6 +66,9 @@ export async function mealByName(name: string) {
     const meal = { Id: idMeal, Name: strMeal, Ingredients: arrayIngredients, Instructions: strInstructions};
     arrayMeals.push(meal);
     });
+
+    const mealInDatabase = { History: "mealByName", Meals: arrayMeals};
+    writeFile(mealInDatabase);
 
     return arrayMeals;
 };

@@ -18,6 +18,9 @@ Se debe ingresar **cocktailById**, junto con el Id deseado, si se desea buscar p
 Se debe ingresar **mealByName**, junto con el nombre o la cadena de caracteres deseado, si se desea buscar por nombre la informacion de una comida  
 Se debe ingresar **cocktailByName**, junto con el nombre o la cadena de caracteres deseado, si se desea buscar por nombre la informacion de un cocktel
 
+### Historial de busquedas
+Tambien se lleva un historial de busquedas que han realizado los usuarios, ademas de la informacion brindada
+
 ### Esta aplicacion usa las siguientes APIs:
 * API de comidas https://www.themealdb.com/api.php
 * API de cockteles https://www.thecocktaildb.com/api.php

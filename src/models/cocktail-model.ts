@@ -1,6 +1,8 @@
 import { URL_RandomCocktail} from "../utils/constants";
 import { URL_API_COCKTAIL } from "../utils/constants";
 import { Messages } from "../utils/enums";
+import { writeFile  } from "../utils/constants";
+
 
 export async function getRandomCocktail() {
     const response = await fetch(URL_RandomCocktail);
@@ -14,6 +16,10 @@ export async function getRandomCocktail() {
         };
     };
     const drink = { Id: idDrink, Name: strDrink, Ingredients: arrayIngredients, Instructions: strInstructions };
+    
+    const drinkInDatabase = { History: "getRandomCocktail", Id: idDrink, Name: strDrink, Ingredients: arrayIngredients, Instructions: strInstructions};
+    writeFile(drinkInDatabase);
+
     return drink;
 };
 
@@ -33,6 +39,10 @@ export async function cocktailById(id: string | number) {
         };
     }
     const drink = { Id: idDrink, Name: strDrink, Ingredients: arrayIngredients, Instructions: strInstructions };
+    
+    const drinkInDatabase = { History: "cocktailById", Id: idDrink, Name: strDrink, Ingredients: arrayIngredients, Instructions: strInstructions};
+    writeFile(drinkInDatabase);
+
     return drink;
 };
 
@@ -56,6 +66,9 @@ export async function cocktailByName(name: string) {
         const drink = { Id: idDrink, Name: strDrink, Ingredients: arrayIngredients, Instructions: strInstructions };
         arrayDrinks.push(drink);
     });
+
+    const drinkInDatabase = { History: "cocktailByName", Drinks: arrayDrinks};
+    writeFile(drinkInDatabase);
 
     return arrayDrinks;
 };
