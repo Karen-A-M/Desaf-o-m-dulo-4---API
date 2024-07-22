@@ -6,7 +6,7 @@ export async function endPoints(sendedMessage) {
     const message = JSON.parse(sendedMessage);
     if(!message.action) {
         return Messages.BAD_REQUEST;
-    }
+    };
 
     if(message.action == "getRandomMeal") {
         return await randomMeal();
@@ -28,5 +28,5 @@ export async function endPoints(sendedMessage) {
     }
     else {
         return Messages.BAD_REQUEST;
-    }
-}
+    };
+};

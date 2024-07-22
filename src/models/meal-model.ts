@@ -6,9 +6,15 @@ export async function getRandomMeal() {
     const response = await fetch(URL_RandomMeal);
     const data = await response.json();
 
+    const arrayIngredients = [];
     const {idMeal, strMeal, strInstructions} = data.meals[0];
-    const meal = { Id: idMeal, Name: strMeal, Instructions: strInstructions};
-    return await meal;
+    for(const propiedad in data.meals[0]) {
+        if (propiedad.search("strIngredient") != -1 && data.meals[0][propiedad]) {
+            arrayIngredients.push(data.meals[0][propiedad]);
+        };
+    };
+    const meal = { Id: idMeal, Name: strMeal, Ingredients: arrayIngredients, Instructions: strInstructions};
+    return meal;
 };
 
 export async function mealById(id: string | number) {
@@ -19,9 +25,15 @@ export async function mealById(id: string | number) {
         return Messages.NOT_FOUND;
     }
 
+    const arrayIngredients = [];
     const {idMeal, strMeal, strInstructions} = data.meals[0];
-    const meal = { Id: idMeal, Name: strMeal, Instructions: strInstructions};
-    return await meal;
+    for(const propiedad in data.meals[0]) {
+        if (propiedad.search("strIngredient") != -1 && data.meals[0][propiedad]) {
+            arrayIngredients.push(data.meals[0][propiedad]);
+        };
+    };
+    const meal = { Id: idMeal, Name: strMeal, Ingredients: arrayIngredients, Instructions: strInstructions};
+    return meal;
 };
 
 export async function mealByName(name: string) {
@@ -30,14 +42,20 @@ export async function mealByName(name: string) {
 
     if(!data.meals) {
         return Messages.NOT_FOUND;
-    }
+    };
     
     const arrayMeals = [];
     data.meals.forEach((eachMeal) => {
     const {idMeal, strMeal, strInstructions} = eachMeal;
-    const meal = { Id: idMeal, Name: strMeal, Instructions: strInstructions};
+    const arrayIngredients = [];
+    for(const propiedad in eachMeal) {
+        if (propiedad.search("strIngredient") != -1 && eachMeal[propiedad]) {
+            arrayIngredients.push(eachMeal[propiedad]);
+        };
+    };
+    const meal = { Id: idMeal, Name: strMeal, Ingredients: arrayIngredients, Instructions: strInstructions};
     arrayMeals.push(meal);
     });
 
-    return await arrayMeals;
+    return arrayMeals;
 };

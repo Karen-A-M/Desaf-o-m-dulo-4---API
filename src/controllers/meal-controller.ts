@@ -10,15 +10,14 @@ export async function getMealById(id: number | string) {
     if(!id) {
         if(id != 0) {
             return Messages.MISSING_DATA;
-        }
-
-    }
+        };
+    };
     
     if(typeof id != "number") {
         if(typeof id != "string") {
             return Messages.BAD_REQUEST;
-        }
-    }
+        };
+    };
 
     return await mealById(id);
 };
@@ -26,11 +25,11 @@ export async function getMealById(id: number | string) {
 export async function getMealByName(name: string) {
     if(!name) {
         return Messages.MISSING_DATA;
-    }
+    };
     
     if(typeof name != "string") {
         return Messages.BAD_REQUEST;
-    }
+    };
     
     return await mealByName(name);
 };

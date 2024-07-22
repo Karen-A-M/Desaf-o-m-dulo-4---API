@@ -6,9 +6,15 @@ export async function getRandomCocktail() {
     const response = await fetch(URL_RandomCocktail);
     const data = await response.json();
 
+    const arrayIngredients = [];
     const {idDrink, strDrink, strInstructions} = data.drinks[0];
-    const drink = { Id: idDrink, Name: strDrink, Instructions: strInstructions};
-    return await drink;
+    for(const propiedad in data.drinks[0]) {
+        if (propiedad.search("strIngredient") != -1 && data.drinks[0][propiedad]) {
+            arrayIngredients.push(data.drinks[0][propiedad]);
+        };
+    };
+    const drink = { Id: idDrink, Name: strDrink, Ingredients: arrayIngredients, Instructions: strInstructions };
+    return drink;
 };
 
 export async function cocktailById(id: string | number) {
@@ -17,11 +23,17 @@ export async function cocktailById(id: string | number) {
 
     if(!data.drinks) {
         return Messages.NOT_FOUND;
-    }
+    };
 
+    const arrayIngredients = [];
     const {idDrink, strDrink, strInstructions} = data.drinks[0];
-    const drink = { Id: idDrink, Name: strDrink, Instructions: strInstructions};
-    return await drink;
+    for(const propiedad in data.drinks[0]) {
+        if (propiedad.search("strIngredient") != -1 && data.drinks[0][propiedad]) {
+            arrayIngredients.push(data.drinks[0][propiedad]);
+        };
+    }
+    const drink = { Id: idDrink, Name: strDrink, Ingredients: arrayIngredients, Instructions: strInstructions };
+    return drink;
 };
 
 export async function cocktailByName(name: string) {
@@ -30,14 +42,20 @@ export async function cocktailByName(name: string) {
     
     if(!data.drinks) {
         return Messages.NOT_FOUND;
-    }
+    };
     
     const arrayDrinks = [];
     data.drinks.forEach((eachdrink) => {
-    const {idDrink, strDrink, strInstructions} = eachdrink;
-    const drink = { Id: idDrink, Name: strDrink, Instructions: strInstructions};
-    arrayDrinks.push(drink);
+        const {idDrink, strDrink, strInstructions} = eachdrink;
+        const arrayIngredients = [];
+        for(const propiedad in eachdrink) {
+            if (propiedad.search("strIngredient") != -1 && eachdrink[propiedad]) {
+                arrayIngredients.push(eachdrink[propiedad]);
+            };
+        };
+        const drink = { Id: idDrink, Name: strDrink, Ingredients: arrayIngredients, Instructions: strInstructions };
+        arrayDrinks.push(drink);
     });
 
-    return await arrayDrinks;
+    return arrayDrinks;
 };
