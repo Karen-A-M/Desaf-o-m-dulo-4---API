@@ -13,12 +13,16 @@ client.on("connect", () => {
         sold: 8459672
     };
 
-    // const data = { action: "getRandomFood" }  // => utiliza getRandomFood
+    // const data = { action: "getRandomMeal" }  // => utiliza getRandomMeal
     // const data = { action: "getRandomCocktail" }  // => utiliza getRandomCocktail
-    // const data = { action: "foodById", body: { id: 0 } }  // => utiliza foodById
+    // const data = { action: "mealById", body: { id: 0 } }  // => utiliza mealById
     // const data = { action: "cocktailById", body: { id: 0 } }  // => utiliza cocktailById
-    // const data = { action: "foodByName", body: { name: "" } }  // => utiliza foodByName
-    const data = { action: "cocktailByName", body: { name: "" } }  // => utiliza cocktailByName
+    const data = { action: "mealByName", body: { name: "" } }  // => utiliza mealByName
+    // const data = { action: "cocktailByName", body: { name: "" } }  // => utiliza cocktailByName
+
+    // const data = { accion: "getRandomMeal" }  // => Probar si me tira error
+    // const data = { action: "getRandomDrink" }  // => Probar si me tira error
+
     
 
     const message = JSON.stringify(data);

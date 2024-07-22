@@ -1,30 +1,30 @@
+import { Messages } from "../utils/enums"; 
 
-
-export function processArguments(sendedMessage) {
+export function endPoints(sendedMessage) {
     const message = JSON.parse(sendedMessage);
     if(!message.action) {
-        return "No me mandaste una accion valida";
+        return Messages.BAD_REQUEST;
     }
 
-    if(message.action == "getRandomFood") {
+    if(message.action == "getRandomMeal") {
         return "entro a getRandomFood";
     }
     else if(message.action == "getRandomCocktail") {
         return "entro a getRandomCocktail";
     }
-    else if(message.action == "foodById") {
+    else if(message.action == "mealById") {
         return "entro a foodById";
     }
     else if(message.action == "cocktailById") {
         return "entro a cocktailById";
     }
-    else if(message.action == "foodByName") {
-        return "entro a foodByName";
+    else if(message.action == "mealByName") {
+        return Messages.OK;
     }
     else if(message.action == "cocktailByName") {
-        return "entro a cocktailByName";
+        return Messages.NOT_FOUND;
     }
     else {
-        return "ERROR!! ACCION INVALIDA";
+        return Messages.BAD_REQUEST;
     }
 }
