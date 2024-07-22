@@ -13,13 +13,13 @@ client.on("connect", () => {
         sold: 8459672
     };
 
-    // const data = { action: "read" }  // => utiliza getAll
-    // const data = { action: "readById", body: { id: 0 } }  // => utiliza getById
-    // const data = { action: "readByName", body: { name: "" } }  // => utiliza getByName
-    // const data = { action: "readByAuthor", body: { author: "" } }  // => utiliza getByAuthor
-    // const data = { action: "create", body: book }  // => utiliza create
-    const data = { action: "modify", body: { id: 12, name: "nuevo nombre" } } // => utiliza modify
-    // const data = { action: "delete", body: { id: 25 } }  // => utiliza deleteById
+    // const data = { action: "getRandomFood" }  // => utiliza getRandomFood
+    // const data = { action: "getRandomCocktail" }  // => utiliza getRandomCocktail
+    // const data = { action: "foodById", body: { id: 0 } }  // => utiliza foodById
+    // const data = { action: "cocktailById", body: { id: 0 } }  // => utiliza cocktailById
+    // const data = { action: "foodByName", body: { name: "" } }  // => utiliza foodByName
+    const data = { action: "cocktailByName", body: { name: "" } }  // => utiliza cocktailByName
+    
 
     const message = JSON.stringify(data);
     client.write(message);
