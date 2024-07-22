@@ -1,17 +1,14 @@
 # Instructivo
 ## Aplicación sobre Comidas y Cockteles
 
-### Se siguio la estructura mostrada a continuacion:
-<img src="https://raw.githubusercontent.com/LalyAprendiendo/challenges-12-07-2024/main/consigna/modelo%20challenge.png">
-
 Los llamados de informacion que se pueden hacer a traves de la aplicacion son los siguientes:
-* Pedir de manera random la informacion de una comida o un cocktel (solamente muestra una opcion)
+* Pedir la informacion de una comida o un cocktel de manera random (solamente muestra una opcion)
 * Busqueda por Id de una comida o un cocktel (solamente muestra una opcion)
 * Busqueda por nombre de una comida o un cocktel (muestra varias opciones, dependiendo de si las comidas o cockteles comparten la cadena de caracteres ingresados)
 
-### Pedir de manera random la informacion de una comida o un cocktel
-Se debe ingresar **getRandomMeal** si se desea pedir de manera random la informacion de una comida  
-Se debe ingresar **getRandomCocktail** si se desea pedir de manera random la informacion de un cocktel
+### Pedir la informacion de una comida o un cocktel de manera random
+Se debe ingresar **getRandomMeal** si se desea pedir la informacion de una comida de manera random  
+Se debe ingresar **getRandomCocktail** si se desea pedir la informacion de un cocktel de manera random
 
 ### Busqueda por Id de una comida o un cocktel
 Se debe ingresar **mealById**, junto con el Id deseado, si se desea buscar por Id la informacion de una comida  
