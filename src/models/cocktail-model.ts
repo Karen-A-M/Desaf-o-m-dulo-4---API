@@ -1,7 +1,34 @@
 import { URL_RandomCocktail} from "../utils/constants";
 import { URL_API_COCKTAIL } from "../utils/constants";
 import { Messages } from "../utils/enums";
-import { writeFile  } from "../utils/constants";
+import { writeFileSync, readFileSync, existsSync } from "node:fs"
+import { pathCocktails } from "../utils/constants";
+
+export function readFile() {
+    if (!existsSync(pathCocktails)) {
+        writeFileSync(pathCocktails, JSON.stringify([]));
+    };
+
+    const databaseJSON = readFileSync(pathCocktails, { encoding: "utf-8" });
+    const databaseJs = JSON.parse(databaseJSON);
+
+    return databaseJs;
+};
+
+export function gethistoryCocktails() {
+    return readFile();
+};
+
+export function writeFile(data) {
+    if (!existsSync(pathCocktails)) {
+        writeFileSync(pathCocktails, JSON.stringify([]));
+    }
+
+    const updatedData = gethistoryCocktails();
+    updatedData.push(data);
+    const dataJSON = JSON.stringify(updatedData)
+    writeFileSync(pathCocktails, dataJSON);
+};
 
 
 export async function getRandomCocktail() {

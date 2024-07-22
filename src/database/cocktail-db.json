@@ -1,0 +1,88 @@
+[
+    {
+        "History": "cocktailByName",
+        "Drinks": [
+            {
+                "Id": "11007",
+                "Name": "Margarita",
+                "Ingredients": [
+                    "Tequila",
+                    "Triple sec",
+                    "Lime juice",
+                    "Salt"
+                ],
+                "Instructions": "Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass."
+            },
+            {
+                "Id": "11118",
+                "Name": "Blue Margarita",
+                "Ingredients": [
+                    "Tequila",
+                    "Blue Curacao",
+                    "Lime juice",
+                    "Salt"
+                ],
+                "Instructions": "Rub rim of cocktail glass with lime juice. Dip rim in coarse salt. Shake tequila, blue curacao, and lime juice with ice, strain into the salt-rimmed glass, and serve."
+            },
+            {
+                "Id": "17216",
+                "Name": "Tommy's Margarita",
+                "Ingredients": [
+                    "Tequila",
+                    "Lime Juice",
+                    "Agave syrup"
+                ],
+                "Instructions": "Shake and strain into a chilled cocktail glass."
+            },
+            {
+                "Id": "16158",
+                "Name": "Whitecap Margarita",
+                "Ingredients": [
+                    "Ice",
+                    "Tequila",
+                    "Cream of coconut",
+                    "Lime juice"
+                ],
+                "Instructions": "Place all ingredients in a blender and blend until smooth. This makes one drink."
+            },
+            {
+                "Id": "12322",
+                "Name": "Strawberry Margarita",
+                "Ingredients": [
+                    "Strawberry schnapps",
+                    "Tequila",
+                    "Triple sec",
+                    "Lemon juice",
+                    "Strawberries",
+                    "Salt"
+                ],
+                "Instructions": "Rub rim of cocktail glass with lemon juice and dip rim in salt. Shake schnapps, tequila, triple sec, lemon juice, and strawberries with ice, strain into the salt-rimmed glass, and serve."
+            },
+            {
+                "Id": "178332",
+                "Name": "Smashed Watermelon Margarita",
+                "Ingredients": [
+                    "Watermelon",
+                    "Mint",
+                    "Grapefruit Juice",
+                    "Lime",
+                    "Tequila",
+                    "Watermelon",
+                    "Mint"
+                ],
+                "Instructions": "In a mason jar muddle the watermelon and 5 mint leaves together into a puree and strain. Next add the grapefruit juice, juice of half a lime and the tequila as well as some ice. Put a lid on the jar and shake. Pour into a glass and add more ice. Garnish with fresh mint and a small slice of watermelon."
+            }
+        ]
+    },
+    {
+        "History": "getRandomCocktail",
+        "Id": "12688",
+        "Name": "Just a Moonmint",
+        "Ingredients": [
+            "Milk",
+            "Chocolate syrup",
+            "Mint syrup"
+        ],
+        "Instructions": "Place all ingredients in the blender jar - cover and whiz on medium speed until well blended. Pour in one tall, 2 medium or 3 small glasses and drink up."
+    }
+]

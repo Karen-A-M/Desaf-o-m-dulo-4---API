@@ -1,6 +1,10 @@
-import { getRandomMeal, mealById, mealByName } from "../models/meal-model";
+import { getRandomMeal, mealById, mealByName, gethistoryMeals } from "../models/meal-model";
 import { Messages } from "../utils/enums";
 
+
+export function historyMeals() {
+    return gethistoryMeals();
+};
 
 export async function randomMeal() {
     return await getRandomMeal();

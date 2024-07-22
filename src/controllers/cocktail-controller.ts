@@ -1,6 +1,9 @@
-import { getRandomCocktail, cocktailById, cocktailByName } from "../models/cocktail-model"; 
+import { getRandomCocktail, cocktailById, cocktailByName, gethistoryCocktails } from "../models/cocktail-model"; 
 import { Messages } from "../utils/enums";
 
+export function historyCocktails() {
+    return gethistoryCocktails();
+};
 
 export async function randomCocktail() {
     return await getRandomCocktail();

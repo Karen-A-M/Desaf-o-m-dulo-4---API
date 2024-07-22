@@ -1,7 +1,35 @@
 import { URL_RandomMeal } from "../utils/constants";
 import { URL_API_MEAL } from "../utils/constants";
 import { Messages } from "../utils/enums";
-import { writeFile  } from "../utils/constants";
+import { writeFileSync, readFileSync, existsSync } from "node:fs"
+export const pathMeals = "./src/database/meals-db.json";
+
+export function readFile() {
+    if (!existsSync(pathMeals)) {
+        writeFileSync(pathMeals, JSON.stringify([]));
+    };
+
+    const databaseJSON = readFileSync(pathMeals, { encoding: "utf-8" });
+    const databaseJs = JSON.parse(databaseJSON);
+
+    return databaseJs;
+};
+
+export function gethistoryMeals() {
+    return readFile()
+};
+
+export function writeFile(data) {
+    if (!existsSync(pathMeals)) {
+        writeFileSync(pathMeals, JSON.stringify([]));
+    }
+
+    const updatedData = gethistoryMeals();
+    updatedData.push(data);
+    const dataJSON = JSON.stringify(updatedData)
+    writeFileSync(pathMeals, dataJSON);
+};
+
 
 
 export async function getRandomMeal() {

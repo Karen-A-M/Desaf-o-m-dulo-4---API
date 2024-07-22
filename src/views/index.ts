@@ -1,6 +1,6 @@
 import { Messages } from "../utils/enums"; 
-import { randomMeal, getMealById, getMealByName } from "../controllers/meal-controller";
-import { randomCocktail, getCocktailById, getCocktailByName } from "../controllers/cocktail-controller";
+import { randomMeal, getMealById, getMealByName, historyMeals } from "../controllers/meal-controller";
+import { randomCocktail, getCocktailById, getCocktailByName, historyCocktails } from "../controllers/cocktail-controller";
 
 export async function endPoints(sendedMessage) {
     const message = JSON.parse(sendedMessage);
@@ -25,6 +25,12 @@ export async function endPoints(sendedMessage) {
     }
     else if(message.action == "cocktailByName") {
         return getCocktailByName(message.body.name);
+    }
+    else if(message.action == "historyMeals") {
+        return historyMeals();
+    }
+    else if(message.action == "historyCocktails") {
+        return historyCocktails();
     }
     else {
         return Messages.BAD_REQUEST;
