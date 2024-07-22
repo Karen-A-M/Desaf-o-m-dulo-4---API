@@ -1,5 +1,6 @@
-const net = require("net");
-const client = new net.createConnection({port: 3000});
+import net from "net";
+import { PORT } from "./utils/constants";
+const client = net.createConnection({ port: PORT });
 
 client.on("connect", () => {
 
@@ -9,10 +10,10 @@ client.on("connect", () => {
 
     // const data = { action: "getRandomCocktail" }  // => utiliza getRandomCocktail
     // const data = { action: "cocktailById", body: { id: 11007 } }  // => utiliza cocktailById
-    // const data = { action: "cocktailByName", body: { name: "margarita" } }  // => utiliza cocktailByName
+    const data = { action: "cocktailByName", body: { name: "margarita" } }  // => utiliza cocktailByName
 
     // const data = { accion: "getRandomMeal" }  // => Probar si me tira error
-    const data = { action: "getRandomDrink" }  // => Probar si me tira error
+    // const data = { action: "getRandomDrink" }  // => Probar si me tira error
 
     
 
@@ -22,5 +23,6 @@ client.on("connect", () => {
 });
 
 client.on("data", async (messageOfServer) => {
-    console.log(JSON.parse(messageOfServer));
+    const message = messageOfServer.toString();
+    console.log(JSON.parse(message));
 });
