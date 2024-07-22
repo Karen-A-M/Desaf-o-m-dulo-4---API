@@ -1,13 +1,12 @@
-import { getRandomCocktail, cocktailById, cocktailByName } from "../models/cocktail-model"; 
+import { getRandomMeal, mealById, mealByName } from "../models/meal-model";
 import { Messages } from "../utils/enums";
 
 
-export async function randomCocktail() {
-    return await getRandomCocktail();
+export async function randomMeal() {
+    return await getRandomMeal();
 };
 
-export async function getCocktailById(id: number | string) {
-
+export async function getMealById(id: number | string) {
     if(!id) {
         if(id != 0) {
             return Messages.MISSING_DATA;
@@ -21,10 +20,10 @@ export async function getCocktailById(id: number | string) {
         }
     }
 
-    return await cocktailById(id);
+    return await mealById(id);
 };
 
-export async function getCocktailByName(name: string) {
+export async function getMealByName(name: string) {
     if(!name) {
         return Messages.MISSING_DATA;
     }
@@ -33,5 +32,5 @@ export async function getCocktailByName(name: string) {
         return Messages.BAD_REQUEST;
     }
     
-    return await cocktailByName(name);
+    return await mealByName(name);
 };

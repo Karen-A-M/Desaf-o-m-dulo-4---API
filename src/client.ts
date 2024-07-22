@@ -14,11 +14,12 @@ client.on("connect", () => {
     };
 
     // const data = { action: "getRandomMeal" }  // => utiliza getRandomMeal
+    // const data = { action: "mealById", body: { id: 52773 } }  // => utiliza mealById
+    // const data = { action: "mealByName", body: { name: "Spicy" } }  // => utiliza mealByName
+
     // const data = { action: "getRandomCocktail" }  // => utiliza getRandomCocktail
-    // const data = { action: "mealById", body: { id: 0 } }  // => utiliza mealById
-    // const data = { action: "cocktailById", body: { id: 0 } }  // => utiliza cocktailById
-    const data = { action: "mealByName", body: { name: "" } }  // => utiliza mealByName
-    // const data = { action: "cocktailByName", body: { name: "" } }  // => utiliza cocktailByName
+    // const data = { action: "cocktailById", body: { id: 11007 } }  // => utiliza cocktailById
+    const data = { action: "cocktailByName", body: { name: "margarita" } }  // => utiliza cocktailByName
 
     // const data = { accion: "getRandomMeal" }  // => Probar si me tira error
     // const data = { action: "getRandomDrink" }  // => Probar si me tira error
@@ -30,6 +31,6 @@ client.on("connect", () => {
 
 });
 
-client.on("data", (messageOfServer) => {
+client.on("data", async (messageOfServer) => {
     console.log(JSON.parse(messageOfServer));
 });

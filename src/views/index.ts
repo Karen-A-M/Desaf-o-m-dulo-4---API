@@ -1,28 +1,30 @@
 import { Messages } from "../utils/enums"; 
+import { randomMeal, getMealById, getMealByName } from "../controllers/meal-controller";
+import { randomCocktail, getCocktailById, getCocktailByName } from "../controllers/cocktail-controller";
 
-export function endPoints(sendedMessage) {
+export async function endPoints(sendedMessage) {
     const message = JSON.parse(sendedMessage);
     if(!message.action) {
         return Messages.BAD_REQUEST;
     }
 
     if(message.action == "getRandomMeal") {
-        return "entro a getRandomFood";
+        return await randomMeal();
     }
     else if(message.action == "getRandomCocktail") {
-        return "entro a getRandomCocktail";
+        return randomCocktail();
     }
     else if(message.action == "mealById") {
-        return "entro a foodById";
+        return await getMealById(message.body.id);
     }
     else if(message.action == "cocktailById") {
-        return "entro a cocktailById";
+        return getCocktailById(message.body.id);
     }
     else if(message.action == "mealByName") {
-        return Messages.OK;
+        return getMealByName(message.body.name);
     }
     else if(message.action == "cocktailByName") {
-        return Messages.NOT_FOUND;
+        return getCocktailByName(message.body.name);
     }
     else {
         return Messages.BAD_REQUEST;
