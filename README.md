@@ -19,5 +19,5 @@ Se debe ingresar **mealByName**, junto con el nombre o la cadena de caracteres d
 Se debe ingresar **cocktailByName**, junto con el nombre o la cadena de caracteres deseado, si se desea buscar por nombre la informacion de un cocktel
 
 ### Esta aplicacion usa las siguientes APIs:
-* API de comidas (https://www.themealdb.com/api.php)
-* API de cockteles (https://www.thecocktaildb.com/api.php)
+* API de comidas https://www.themealdb.com/api.php
+* API de cockteles https://www.thecocktaildb.com/api.php
