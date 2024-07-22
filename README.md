@@ -1,6 +1,9 @@
 # Instructivo
 ## Aplicación sobre Comidas y Cockteles
 
+### Se siguio la estructura mostrada a continuacion:
+https://raw.githubusercontent.com/LalyAprendiendo/challenges-12-07-2024/main/consigna/modelo%20challenge.png
+
 Los llamados de informacion que se pueden hacer a traves de la aplicacion son los siguientes:
 * Pedir de manera random la informacion de una comida o un cocktel (solamente muestra una opcion)
 * Busqueda por Id de una comida o un cocktel (solamente muestra una opcion)
