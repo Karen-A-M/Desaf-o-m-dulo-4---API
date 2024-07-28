@@ -24,13 +24,13 @@ Dentro de nuestra aplicación encontraras nuestro "Menú 404", ya que son sabore
 * Se debe ingresar **cocktailById**, junto con el Id deseado, si se desea buscar la receta de un coctel a través de su Id.
 
 ### **Búsqueda por nombre de una comida o un coctel:**
-* Se debe ingresar **mealByName**, junto con el nombre o la cadena de caracteres deseado, si se desea buscar por nombre la receta de una comida.  
-* Se debe ingresar **cocktailByName**, junto con el nombre o la cadena de caracteres deseado, si se desea buscar por nombre la receta de un coctel.  
+* Se debe ingresar **mealByName**, junto con el nombre o la cadena de caracteres deseado, si se desea buscar la receta de una comida a través de su nombre.  
+* Se debe ingresar **cocktailByName**, junto con el nombre o la cadena de caracteres deseado, si se desea buscar la receta de un coctel a través de su nombre.  
 
 ### **Historial de búsquedas:**
 * Se debe ingresar **historyMeals** si se desea pedir el historial de las búsquedas de comidas que han realizado los usuarios, además de la información sobre las recetas brindadas. 
 * Se debe ingresar **historyCocktails** si se desea pedir el historial de las búsquedas de cocteles que han realizado los usuarios, además de la información sobre las recetas brindadas. 
 
-### **Esta aplicación usa las siguientes Apis publicas:**
-* API de comidas https://www.themealdb.com/api.php
-* API de cocteles https://www.thecocktaildb.com/api.php
+### **Esta aplicación usa las siguientes Apis públicas:**
+* API de comidas: https://www.themealdb.com/api.php
+* API de cocteles: https://www.thecocktaildb.com/api.php
