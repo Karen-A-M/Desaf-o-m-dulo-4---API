@@ -1,7 +1,6 @@
 import { getRandomMeal, mealById, mealByName, gethistoryMeals } from "../models/meal-model";
 import { Messages } from "../utils/enums";
 
-
 export function historyMeals() {
     return gethistoryMeals();
 };

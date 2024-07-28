@@ -18,8 +18,6 @@ client.on("connect", () => {
     // const data = { accion: "getRandomMeal" }  // => Probar si me tira error
     // const data = { action: "getRandomDrink" }  // => Probar si me tira error
 
-    
-
     const message = JSON.stringify(data);
     client.write(message);
 

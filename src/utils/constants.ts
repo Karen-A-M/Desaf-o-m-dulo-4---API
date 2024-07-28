@@ -1,9 +1,8 @@
-import { writeFileSync, readFileSync, existsSync } from "node:fs"
-
 export const PORT = 3000;
 export const callback = () => {
     console.log("SERVIDOR ESCUCHANDO EN EL PUERTO " + PORT);
 };
+
 export const pathMeals = "./src/database/meals-db.json";
 export const pathCocktails = "./src/database/cocktail-db.json";
 

@@ -30,8 +30,6 @@ export function writeFile(data) {
     writeFileSync(pathMeals, dataJSON);
 };
 
-
-
 export async function getRandomMeal() {
     const response = await fetch(URL_RandomMeal);
     const data = await response.json();

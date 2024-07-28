@@ -30,7 +30,6 @@ export function writeFile(data) {
     writeFileSync(pathCocktails, dataJSON);
 };
 
-
 export async function getRandomCocktail() {
     const response = await fetch(URL_RandomCocktail);
     const data = await response.json();
