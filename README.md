@@ -7,6 +7,7 @@
 <h2 align="center"> Aplicación sobre Comidas y Cocteles </h2>
 
 Dentro de nuestra aplicación encontraras nuestro "Menú 404", ya que son sabores que no encontrarás en ningún otro lugar.
+</p>
 
 <h2 align="center"> Los llamados de información que se pueden hacer a través de la aplicación son los siguientes: </h2>
 
