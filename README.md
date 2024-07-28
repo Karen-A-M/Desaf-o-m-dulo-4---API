@@ -21,7 +21,7 @@ Dentro de nuestra aplicación encontraras nuestro "Menú 404", ya que son sabore
 * Se debe ingresar **getRandomMeal** si se desea pedir la receta de una comida de manera random.  
 * Se debe ingresar **getRandomCocktail** si se desea pedir la receta de un coctel de manera random.
 
-## **Búsqueda por Id de una comida o un coctel**
+# **Búsqueda por Id de una comida o un coctel:**
 Se debe ingresar **mealById**, junto con el Id deseado, si se desea buscar la receta de una comida a través de su Id.  
 Se debe ingresar **cocktailById**, junto con el Id deseado, si se desea buscar la receta de un coctel a través de su Id.
 
