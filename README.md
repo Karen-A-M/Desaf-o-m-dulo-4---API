@@ -9,14 +9,16 @@
 Dentro de nuestra aplicación encontraras nuestro "Menú 404", ya que son sabores que no encontrarás en ningún otro lugar.
 
 <h2 align="center"> Los llamados de información que se pueden hacer a través de la aplicación son los siguientes: </h2>
+
 * Pedir la receta de una comida o un coctel de manera random.
 * Búsqueda por Id de una comida o un coctel.
 * Búsqueda por nombre de una comida o un coctel (puede llegar a mostrar varias recetas, dependiendo de si las comidas o cocteles de nuestro menú comparten la cadena de caracteres ingresados).
 * Historial de las búsquedas que han realizado los usuarios, además de la información sobre las recetas brindadas.
 
 <h2 align="center"> Pedir la receta de una comida o un coctel de manera random </h2>
-Se debe ingresar **getRandomMeal** si se desea pedir la receta de una comida de manera random.  
-Se debe ingresar **getRandomCocktail** si se desea pedir la receta de un coctel de manera random.
+
+* Se debe ingresar **getRandomMeal** si se desea pedir la receta de una comida de manera random.  
+* Se debe ingresar **getRandomCocktail** si se desea pedir la receta de un coctel de manera random.
 
 <h2 align="center"> Búsqueda por Id de una comida o un coctel </h2>
 Se debe ingresar **mealById**, junto con el Id deseado, si se desea buscar la receta de una comida a través de su Id.  
